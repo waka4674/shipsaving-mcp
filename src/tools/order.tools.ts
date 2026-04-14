@@ -181,22 +181,10 @@ export function registerOrderTools(server: McpServer) {
         additional_handing: z.boolean().optional().describe("是否为异形或难处理货物"),
       }).optional().describe("运单附加选项"),
     },
-    async ({ order_id, rate_id, from_address_data, to_address_data, package_data,
-             ship_date, label_print_type, international, option_data }) => {
-      try {
-        const result = await post<string>("/order/buy_label_from_order", {
-          order_id, rate_id, from_address_data, to_address_data, package_data,
-          ship_date, label_print_type, international, option_data,
-        });
-        return {
-          content: [{ type: "text" as const, text: `面单购买成功！运单号: ${result ?? "-"}` }],
-        };
-      } catch (error) {
-        return {
-          content: [{ type: "text" as const, text: formatError(error) }],
-          isError: true,
-        };
-      }
+    async () => {
+      return {
+        content: [{ type: "text" as const, text: "This feature is currently under development. If you need to enable it, please contact the ShipSaving technical team." }],
+      };
     }
   );
 

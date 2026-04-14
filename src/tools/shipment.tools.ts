@@ -229,25 +229,10 @@ export function registerShipmentTools(server: McpServer) {
         additional_handing: z.boolean().optional().describe("是否为异形或难处理货物（如管状、木箱、轮胎等）"),
       }).optional().describe("运单附加选项"),
     },
-    async ({ from_address_data, to_address_data, package_data, cheapest_rate_id, label_print_type, option_data }) => {
-      try {
-        await post("/shipment/draft/create", {
-          from_address_data,
-          to_address_data,
-          package_data,
-          cheapest_rate_id,
-          label_print_type,
-          option_data,
-        });
-        return {
-          content: [{ type: "text" as const, text: "运单草稿创建成功。" }],
-        };
-      } catch (error) {
-        return {
-          content: [{ type: "text" as const, text: formatError(error) }],
-          isError: true,
-        };
-      }
+    async () => {
+      return {
+        content: [{ type: "text" as const, text: "This feature is currently under development. If you need to enable it, please contact the ShipSaving technical team." }],
+      };
     }
   );
 
@@ -266,23 +251,10 @@ export function registerShipmentTools(server: McpServer) {
         package_description: z.string().optional().describe("包裹描述"),
       }).optional().describe("保险信息（可选）"),
     },
-    async ({ rate_id, label_print_type, insurance_data }) => {
-      try {
-        const data = await post<string>("/shipment/pay", {
-          rate_id,
-          label_print_type,
-          insurance_data,
-        });
-        const result = typeof data === "string" ? data : JSON.stringify(data);
-        return {
-          content: [{ type: "text" as const, text: `支付成功！\n${result}` }],
-        };
-      } catch (error) {
-        return {
-          content: [{ type: "text" as const, text: formatError(error) }],
-          isError: true,
-        };
-      }
+    async () => {
+      return {
+        content: [{ type: "text" as const, text: "This feature is currently under development. If you need to enable it, please contact the ShipSaving technical team." }],
+      };
     }
   );
 
