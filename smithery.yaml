@@ -1,0 +1,22 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      appKey:
+        type: string
+        title: ShipSaving App Key
+        description: "Your ShipSaving API key (starts with sk_). Get it from ShipSaving Dashboard → Settings → API."
+      apiBaseUrl:
+        type: string
+        title: API Base URL
+        description: "ShipSaving API base URL. Defaults to production."
+        default: "https://pro-service.shipsaving.us"
+    required:
+      - appKey
+  commandFunction:
+    - node
+    - dist/index.js
+  env:
+    SHIPSAVING_APP_KEY: "{{config.appKey}}"
+    SHIPSAVING_API_BASE_URL: "{{config.apiBaseUrl}}"

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.env
+.env*
+*.log
+*.csv
+*.txt
+.mcp.json
+PLAN.md
+TEST.md
