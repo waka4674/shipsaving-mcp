@@ -212,7 +212,7 @@ claude mcp list
 | 变量 | 必填 | 默认值 | 说明 |
 |------|------|-------|------|
 | `SHIPSAVING_APP_KEY` | 是 | — | ShipSaving App Key（`sk_` 开头） |
-| `SHIPSAVING_API_BASE_URL` | 否 | `https://pro-service.shipsaving.us` | API 地址 |
+| `SHIPSAVING_API_BASE_URL` | 否 | `https://app-gateway.shipsaving.com` | API 地址 |
 | `SHIPSAVING_TIMEOUT_MS` | 否 | `30000` | 请求超时时间（毫秒） |
 
 ## 问题排查

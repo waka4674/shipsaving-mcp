@@ -152,7 +152,7 @@ Track package 1Z999AA10123456784
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `SHIPSAVING_APP_KEY` | Yes | — | ShipSaving App Key (`sk_` prefix) |
-| `SHIPSAVING_API_BASE_URL` | No | `https://pro-service.shipsaving.us` | API base URL |
+| `SHIPSAVING_API_BASE_URL` | No | `https://app-gateway.shipsaving.com` | API base URL |
 | `SHIPSAVING_TIMEOUT_MS` | No | `60000` | Request timeout in milliseconds |
 | `SHIPSAVING_LOG_FILE` | No | — | Path to log file (logs go to stderr by default) |
 
@@ -169,7 +169,7 @@ npm run build
 npm run dev
 
 # Debug with MCP Inspector
-SHIPSAVING_API_BASE_URL=https://pro-service.shipsaving.us \
+SHIPSAVING_API_BASE_URL=https://app-gateway.shipsaving.com \
 SHIPSAVING_APP_KEY=sk_your_app_key \
 npx @modelcontextprotocol/inspector node dist/index.js
 ```

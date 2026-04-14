@@ -16,7 +16,7 @@ SHIPSAVING_APP_KEY=sk_your_app_key_here \
 npx @modelcontextprotocol/inspector node dist/index.js
 ```
 
-**Important:** The project does not load `.env` files. All environment variables must be passed explicitly at startup, otherwise `SHIPSAVING_API_BASE_URL` falls back to the production URL `https://pro-service.shipsaving.us`.
+**Important:** The project does not load `.env` files. All environment variables must be passed explicitly at startup, otherwise `SHIPSAVING_API_BASE_URL` falls back to the production URL `https://app-gateway.shipsaving.com`.
 
 ## Architecture
 
@@ -41,10 +41,10 @@ This is a TypeScript MCP server using stdio transport. It wraps the ShipSaving R
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `SHIPSAVING_APP_KEY` | — | Required. appKey from `/api_auth/app_key/create` |
-| `SHIPSAVING_API_BASE_URL` | `https://pro-service.shipsaving.us` | Backend URL |
+| `SHIPSAVING_API_BASE_URL` | `https://app-gateway.shipsaving.com` | Backend URL |
 | `SHIPSAVING_TIMEOUT_MS` | `30000` | Request timeout in ms |
 
 ## Things to note
-Execute automatically after each code change: SHIPSAVING_API_BASE_URL=https://pro-service.shipsaving.us \
+Execute automatically after each code change: SHIPSAVING_API_BASE_URL=https://app-gateway.shipsaving.com \
 SHIPSAVING_APP_KEY=sk_your_app_key_here \
 npx @modelcontextprotocol/inspector node dist/index.js

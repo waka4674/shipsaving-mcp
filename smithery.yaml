@@ -11,7 +11,7 @@ startCommand:
         type: string
         title: API Base URL
         description: "ShipSaving API base URL. Defaults to production."
-        default: "https://pro-service.shipsaving.us"
+        default: "https://app-gateway.shipsaving.com"
     required:
       - appKey
   commandFunction:
