@@ -96,6 +96,7 @@ claude mcp list
 |------|-------------|
 | `list_addresses` | Query address book entries |
 | `create_address` | Add a new address |
+| `update_address` | Update an existing address |
 | `validate_address` | Validate address deliverability |
 
 ### Package Templates
@@ -103,6 +104,7 @@ claude mcp list
 | Tool | Description |
 |------|-------------|
 | `list_packages` | List saved package templates |
+| `list_predefined_packages` | List carrier-provided package types |
 | `create_package` | Create a reusable package template |
 
 ### Carriers & Stores

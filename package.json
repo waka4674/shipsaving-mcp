@@ -1,6 +1,7 @@
 {
   "name": "shipsaving-mcp",
-  "version": "1.0.2",
+  "mcpName": "io.github.waka4674/shipsaving-mcp",
+  "version": "1.0.3",
   "description": "MCP Server for ShipSaving logistics platform",
   "type": "module",
   "main": "dist/index.js",
@@ -25,6 +26,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "vitest": "^3.2.4"
   }
 }

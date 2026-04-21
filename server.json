@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.waka4674/shipsaving-mcp",
+  "title": "ShipSaving",
+  "description": "MCP server for ShipSaving — shipping rates, labels, orders, tracking",
+  "version": "1.0.3",
+  "repository": {
+    "url": "https://github.com/waka4674/shipsaving-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "shipsaving-mcp",
+      "version": "1.0.3",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SHIPSAVING_APP_KEY",
+          "description": "ShipSaving API key (starts with sk_)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "SHIPSAVING_API_BASE_URL",
+          "description": "API base URL",
+          "isRequired": false,
+          "default": "https://app-gateway.shipsaving.com"
+        }
+      ]
+    }
+  ]
+}
